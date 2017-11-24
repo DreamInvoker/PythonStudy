@@ -26,9 +26,15 @@ try:
            "values(%s,%s)"
            )
     data = ('Stephanie', '22')
-    cursor.execute(add, data)
+    # cursor.execute(add, data)
     # 确保数据提交至数据库
     cnx.commit()
+
+    query = (' select * from user ')
+    cursor.execute(query)
+    for (id, name, age) in cursor:
+        print("{},{},{}".format(id, name, age))
+
 
 except mysql.connector.Error as err:  # 处理异常信息，注意缩进
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
