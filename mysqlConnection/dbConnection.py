@@ -7,7 +7,7 @@ from mysql.connector import errorcode
 config = {
     'user': 'root',
     'password': '123456',
-    'host': '23.106.147.11',
+    'host': '172.96.201.190',
     'database': 'test',
     'raise_on_warnings': True,
     'use_pure': True,  # 是否使用 Connector/Python C Extension

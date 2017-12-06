@@ -115,7 +115,7 @@ dict([('Runoob', 1), ('Google', 2), ('Taobao', 3)])
 # {'Taobao': 3, 'Runoob': 1, 'Google': 2}
 {x: x ** 2 for x in (2, 4, 6)}
 # {2: 4, 4: 16, 6: 36}
-b=dict(Runoob=1, Google=2, Taobao=3)
+b = dict(Runoob=1, Google=2, Taobao=3)
 print(b)
 {'Taobao': 3, 'Runoob': 1, 'Google': 2}
 
@@ -125,4 +125,72 @@ print(b)
 
 # 1、字典是一种映射类型，它的元素是键值对。
 # 2、字典的关键字必须为不可变类型，且不能重复。
-# 3、创建空字典使用 { }。
+# 3、创建空字典使用 { }
+x = 1
+# int(x [,base])
+# 将x转换为一个整数
+float(x)
+# 将x转换到一个浮点数
+# complex(real [,imag])
+# 创建一个复数
+# str(x)
+# 将对象 x 转换为字符串
+repr(x)
+# 将对象 x 转换为表达式字符串
+# eval(str)
+# 用来计算在字符串中的有效Python表达式,并返回一个对象
+# tuple(s)
+# 将序列 s 转换为一个元组
+# list(s)
+# 将序列 s 转换为一个列表
+# set(s)
+# 转换为可变集合
+# dict(d)
+# 创建一个字典。d 必须是一个序列 (key,value)元组。
+# frozenset(s)
+# 转换为不可变集合
+chr(x)
+# 将一个整数转换为一个字符
+# unichr(x)
+# 将一个整数转换为Unicode字符
+# ord(x)
+# 将一个字符转换为它的整数值
+hex(x)
+# 将一个整数转换为一个十六进制字符串
+oct(x)
+
+
+# 将一个整数转换为一个八进制字符串
+
+
+# python中的函数还可以接收可变长参数，比如以 "*" 开头的的参数名，会将所有的参数收集到一个元组上。
+def test(*args):
+    print(args)
+    return args
+
+
+print(type(test(1, 2, 3, 4)))
+print(test(1, 2, 3))
+# 在list的使用中，开始时很容易忽视的一点是：
+list = ['abcd', 786, 2.23, 'runoob', 70.2]
+print(list[1:3])  # 从第二个开始输出到第三个元素
+print (list[2])
+print (list[2:3])
+# 这两句话打印的内容其实是一样的，但是第二句话有中括号
+
+
+# type 是用于求一个未知数据类型对象，而 isinstance 是用于判断一个对象是否是已知类型。
+# type 不认为子类是父类的一种类型，而isinstance会认为子类是父类的一种类型。
+# 可以用 isinstance 判断子类对象是否继承于父类，type 不行。
+# 综合以上几点，type 与 isinstance 虽然都与数据类型相关，但两者其实用法不同，type 主要用于判断未知数据类型，isinstance 主要用于判断 A 类是否继承于 B 类：
+# 判断子类对象是否继承于父类
+class father(object):
+    pass
+class son(father):
+    pass
+if __name__ == '__main__':
+    print(type(son())==father)
+    print (isinstance(son(),father))
+    print (type(son()))
+    print (type(son))
+
