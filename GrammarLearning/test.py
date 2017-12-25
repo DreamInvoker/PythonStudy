@@ -16,3 +16,22 @@ print("{0:.2f}".format(math.pi))
 table = {'Google': 1, 'Runoob': 2, 'Taobao': 3}
 print("Runoob:{0[Runoob]:d};Google:{0[Google]:d};Taobao:{0[Taobao]:d}".format(table))
 print("Runoob:{Runoob:d};Google:{Google:d};Taobao:{Taobao:d}".format(**table))
+
+str = input("请输入：")
+print("您输入的内容是："+str)
+
+# 模式    r   r+  w   w+  a   a+
+# 读       *   *         *        *
+# 写            *   *    *   *   *
+# 创建             *    *    *   *
+# 覆盖             *    *
+# p开始 *    *  *     *
+# p结束                      *    *
+
+# 文件读写默认模式为"r"
+
+# 当处理一个文件对象时, 使用 with 关键字是非常好的方式。
+# 在结束后, 它会帮你正确的关闭文件。 而且写起来也比 try - finally 语句块要简短:</p>
+# with open('/tmp/foo.txt', 'r') as f:
+#     read_data = f.read()
+# f.closed
