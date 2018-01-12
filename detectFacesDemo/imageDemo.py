@@ -14,11 +14,11 @@
 import cv2
 
 facescascades = cv2.CascadeClassifier(
-    r"D:/OpenSource/opencv/opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml"
+    r"D:/OpenSource/opencv/opencv/sources/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml"
 )
-images = cv2.imread("img/2.jpg")
-faces = facescascades.detectMultiScale(images)
+images = cv2.imread("img/1.jpg")
+faces = facescascades.detectMultiScale(images, scaleFactor=1.1, minNeighbors=20,minSize=(10, 10))
 print faces
 for x, y, w, h in faces:
-    cv2.rectangle(images, (x, y), (x + w, y + h), (0, 255, 0), 2)
+    cv2.rectangle(images, (x, y), (x + w, y + h), (0, 0, 255), 2)
 cv2.imwrite("text.jpg", images)
